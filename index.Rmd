@@ -1,0 +1,19 @@
+---
+title: "Indigo Bannister"
+image: "Indigo-Bannister-headshot.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/indigo-bannister-67192a30/"
+  - label: GitHub
+    url: "https://github.com/indigobannister"
+  - label: Email
+    url: "mailto:indigobannister@ucsb.edu"
+output:
+  postcards::jolla
+  
+site: distill::distill_website
+---
+ 
+I am a second-year Master's student at the Bren School of Environmental Science and Management at UC Santa Barbara studying conservation planning and the water quality impacts of fire. 
+
+I love swing dancing (Lindy Hop), baking (sourdough anyone?), and all things outdoors.
