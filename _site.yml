@@ -9,6 +9,4 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-    - text: "Indigo"
-      href: indigo.html
 output: distill::distill_article
