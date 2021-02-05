@@ -85,29 +85,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Indigo Bannister: About Me</title>
+  <title>Indigo Bannister: Blog</title>
 
-  <meta property="description" itemprop="description" content="Some additional details about me."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Indigo Bannister: About Me"/>
+  <meta property="og:title" content="Indigo Bannister: Blog"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about me."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Indigo Bannister"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Indigo Bannister: About Me"/>
-  <meta property="twitter:description" content="Some additional details about me."/>
+  <meta property="twitter:title" content="Indigo Bannister: Blog"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About Me"]},{"type":"character","attributes":{},"value":["Some additional details about me."]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2047,12 +2044,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body>
+<body class="layout-listing">
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About Me","description":"Some additional details about me.","authors":[]}
+{"title":"Blog","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2074,186 +2071,174 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
+<!--radix_placeholder_article_listing-->
+
+
+<script type="application/javascript">
+
+function init_posts_list() {
+
+  function load_image(img) {
+    var src = $(img).attr('data-src');
+    if (src) {
+      $(img).attr('src', src);
+      $(img).load(function() {
+        img.removeAttribute('data-src');
+      });
+    }
+  }
+
+  function set_posts_visible(posts, visible) {
+    if (visible) {
+
+      // show bottom border by default
+      $(posts).removeClass('post-preview-last');
+
+      // apply limits if need be
+      var max_posts = 25;
+      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
+      if (apply_limits && posts.length > max_posts) {
+        posts = $(posts).slice(0, max_posts);
+      } else {
+        $('.posts-more a').addClass('hidden');
+      }
+
+      // apply last style
+      $(posts.slice(-1)[0]).addClass('post-preview-last');
+
+      $(posts).removeClass('hidden');
+      $(posts).find('img[data-src]').each(function(i, img) {
+        load_image(img);
+      });
+    } else {
+      $(posts).addClass('hidden');
+    }
+  }
+
+  function apply_hash_filter() {
+
+    // clear active state
+    $('.categories .active').removeClass('active');
+
+    // mark all posts invisible to start
+    set_posts_visible($('.posts-list').children('a'), false);
+
+    // if we have a hash filter
+    if (window.location.hash && window.location.hash.startsWith("#category:")) {
+
+      // mark posts that match the category visible
+      var page_category = window.location.hash.replace(/^#category:/, "");
+      var posts = $('.post-metadata').map(function(idx, script) {
+        var metadata = $.parseJSON($(script).html());
+        var post = null;
+        $.each(metadata.categories, function(idx, category) {
+          category = category.replace(/ /g,"_");
+          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
+            post = $(script).parent().get();
+            return false;
+          }
+        });
+        return post;
+      });
+      set_posts_visible(posts, true);
+
+      // mark the hash active
+      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
+
+      // update the list_caption
+      var list_caption = $('.posts-list-caption');
+      var caption = (page_category || '').toLowerCase() === "articles"
+        ? list_caption.attr('data-caption')
+        : ('Category: ' + page_category.replace(/_/g," "));
+      list_caption.text(caption);
+
+    } else {
+
+      // no hash filter, make all posts visible (subject to max display)
+      set_posts_visible($('.posts-list').children(), true);
+
+      // reset list caption
+      var list_caption = $('.posts-list-caption');
+      list_caption.text(list_caption.attr('data-caption'));
+
+
+    }
+  }
+
+  // more articles
+  function apply_post_limits(apply) {
+    if (apply) {
+      $('.posts-container').addClass('posts-apply-limit');
+      $('.posts-more a').removeClass('hidden');
+    } else {
+      $('.posts-container').removeClass('posts-apply-limit');
+      $('.posts-more a').addClass('hidden');
+    }
+  }
+
+  // click handling for tags
+  $('.dt-tag').click(function(ev) {
+    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
+    return false;
+  })
+
+  // hash filter handling
+  apply_hash_filter();
+  $(window).on('hashchange',function() {
+    apply_post_limits(true);
+    apply_hash_filter();
+  });
+
+  // more articles link
+  $('.posts-more a').click(function(e) {
+    e.preventDefault();
+    apply_post_limits(false);
+    apply_hash_filter();
+    return false;
+  });
+
+}
+
+</script>
+
+
+
+<div class="posts-container posts-apply-limit l-page">
+<div class="posts-list">
+<h1 class="posts-list-caption" data-caption="Blog">Blog</h1>
+<a href="posts/2021-02-04-welcome/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">Feb. 4, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Unknown</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>welcome</h2>
+<div class="dt-tags"></div>
+<p>A short description of the post.</p>
+</div>
+</a>
+</div>
+<div class="posts-more">
+<a href="#">More articles &raquo;</a>
+</div>
+</div>
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>About Me</h1>
+<h1>Blog</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Some additional details about me.</p></p>
+
 </div>
 
 
 <div class="d-article">
-<h2 id="education">Education</h2>
-<table>
-<colgroup>
-<col style="width: 75%" />
-<col style="width: 24%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Master of Environmental Science &amp; Management</th>
-<th style="text-align: right;">Expected 2021</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bren School of Environmental Science &amp; Management, UC Santa Barbara</td>
-<td style="text-align: right;"><em>Santa Barbara, CA</em></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr class="header">
-<th>B.S. Environmental Management &amp; Protection</th>
-<th style="text-align: right;">2016</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>California Polytechnic State University</td>
-<td style="text-align: right;"><em>San Luis Obispo, CA</em></td>
-</tr>
-</tbody>
-</table>
-<h2 id="masters-group-project">Master’s Group Project</h2>
-<table>
-<colgroup>
-<col style="width: 75%" />
-<col style="width: 24%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Locating prescribed fire to maximize water quality benefits in the Sierra Nevada</th>
-<th style="text-align: right;">4/20-Present</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Project Manager</td>
-<td style="text-align: right;"><em>Client:</em> American Rivers</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Built a fire- and erosion-modeling framework to recommend prescribed fire locations within Central Sierra Nevada watersheds that reduce post-fire erosion loss and protect riparian habitats and water infrastructure.</li>
-<li>Co-managed a remotely distanced 5-person team which included facilitating team meetings, designing and implementing project management software, and collaborating to meet project objectives.</li>
-</ul>
-<h2 id="conservation-planning-experience">Conservation Planning Experience</h2>
-<table>
-<thead>
-<tr class="header">
-<th>State Wildlife Action Plan Intern</th>
-<th style="text-align: right;">7/20-9/20</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>USGS Climate Adaptation Science Center (CASC)</td>
-<td style="text-align: right;"><em>Remote</em></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Created and applied a literature-informed typology system to qualitatively analyze the inclusion of climate adaptation planning in 7 existing State Wildlife Action Plans (SWAP) to guide future CASC support and plans.</li>
-<li>Developed interview framework to guide future conversations with state wildlife agency representatives.</li>
-<li>Facilitated a national conversation between regional CASCs about how the network could support SWAPs.</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>Conservation Planning Technician</th>
-<th style="text-align: right;">6/17-8/19</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Sonoma County Ag + Open Space</td>
-<td style="text-align: right;"><em>Santa Rosa, CA</em></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Coordinated over 180 individuals from 80 organizations in collaboration with superiors to develop the Living in a Fire Adapted Landscape report in response to the 2017 North Bay fires.</li>
-<li>Composed content, reviewed and integrated over 4,000 public comments, and organized 7 public meetings in support of the development of the Vital Lands Initiative, a comprehensive land conservation plan.</li>
-<li>Collaborated with graphic designers to develop two 40+ page reports and 12 public messaging documents in support of the Healthy Lands &amp; Healthy Economies Initiative, an ecosystem service valuation.</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>Sustainable Mapping Intern</th>
-<th style="text-align: right;">5/17-6/17</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Greenbelt Alliance</td>
-<td style="text-align: right;"><em>San Francisco, CA</em></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Calculated park-deficient acres in Santa Rosa and recommended areas for equitable park investment.</li>
-<li>Analyzed urban park accessibility in the San Francisco Bay Area using ArcGIS to support community planning advocacy aimed at improving quality of life for marginalized communities.</li>
-</ul>
-<h2 id="additional-environmental-experience">Additional Environmental Experience</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Strategic Planning Assistant</th>
-<th style="text-align: right;">3/20-10/20</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Santa Cruz Island Reserve</td>
-<td style="text-align: right;"><em>Santa Barbara, CA</em></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr class="header">
-<th>LCA Research Assistant</th>
-<th style="text-align: right;">10/15–6/16</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Natural Resource Dept., Cal Poly</td>
-<td style="text-align: right;"><em>San Luis Obispo, CA</em></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr class="header">
-<th>Conservation Planning Intern</th>
-<th style="text-align: right;">6/15-9/15</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Sonoma County Ag + Open Space</td>
-<td style="text-align: right;"><em>Santa Rosa, CA</em></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr class="header">
-<th>GIS Intern</th>
-<th style="text-align: right;">6/14-9/14</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Sonoma Ecology Center</td>
-<td style="text-align: right;"><em>Glen Ellen, CA</em></td>
-</tr>
-</tbody>
-</table>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
