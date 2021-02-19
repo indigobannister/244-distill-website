@@ -7,6 +7,6 @@ navbar:
       href: index.html
     - text: "About Me"
       href: about.html
-    - text: "Blog"
+    - text: "Projects"
       href: blog.html
 output: distill::distill_article

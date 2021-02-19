@@ -1,19 +1,14 @@
 [
   {
     "path": "posts/2021-02-04-welcome/",
-    "title": "welcome",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Unknown",
-        "url": {}
-      }
-    ],
+    "title": "Forests to Faucets",
+    "description": "A project focused on prioritizing prescribed fire in the Central Sierra Nevada for water quality benefits.",
+    "author": [],
     "date": "2021-02-04",
     "categories": [],
-    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "contents": "\r\nSouth Yuba River State Park, Source: Larry MillerAs part of a team of five for our master’s capstone project, identified three priority watersheds for prescribed fire in the Central Sierra Nevada for prescribed fire to minimize the water quality impacts of high severity wildfire for our client, American Rivers.\r\nLearn more at https://www.forests2faucets.com/.\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-02-04T17:53:09-08:00",
+    "last_modified": "2021-02-19T10:02:17-08:00",
     "input_file": {}
   }
 ]
