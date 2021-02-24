@@ -1,5 +1,6 @@
 name: "."
 title: "Indigo Bannister"
+theme: postcards.css
 output_dir: "docs"
 navbar:
   right:

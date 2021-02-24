@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd"><metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin>California Department of Fish and Game, Office of Spill Prevention and Response</origin>
+<pubdate>20090723</pubdate>
+<title>Oil Spill Incident Tracking [ds394]</title>
+<edition>2008</edition>
+<geoform>vector digital data</geoform>
+<onlink>\\molib01\bios\WorkArea\ds300-399\394-SpillIncidentTracking\v2\v2_final\ds394.shp</onlink>
+<onlink>http://bios.dfg.ca.gov</onlink>
+<onlink>ftp://ftp.dfg.ca.gov/BDB/GIS/BIOS/Public_Datasets/300_399/ds394.zip</onlink>
+</citeinfo>
+</citation>
+<descript>
+<abstract>The Office of Spill Prevention and Response (OSPR) Incident Tracking Database is a statewide oil spill tracking information system. The data are collected by OSPR Field Response Team members for Marine oil spills and by OSPR Inland Pollution Coordinators and Wardens for Inland incidents.</abstract>
+<purpose>The database system is designed to provide OSPR with quantified statistical data on oil spill response by OSPR field responders. The OSPR Incident Tracking Database System project was initiated to provide OSPR with oil spill incident data for statistical evaluation and justification for program planning, drills and exercise training and development, legislative analysis, budget preparation, to inform and educate the public and analyze OSPR's overall spill preparedness and response performance. An "incident", for purposes of this database, is "a discharge or threatened discharge of petroleum or other deleterious material into the waters of the state."</purpose>
+<supplinf>Marine data are entries from OSPR Oil Spill Prevention Specialists (OSPS) and is accurate to 98%. Inland data is based on California Emergency Management Agency (Cal EMA) reports and is only as accurate as the reporting party.</supplinf>
+</descript>
+<timeperd>
+<timeinfo>
+<sngdate>
+<caldate>2008</caldate>
+</sngdate>
+</timeinfo>
+<current>publication date</current>
+</timeperd>
+<status>
+<progress>Complete</progress>
+<update>Daily</update>
+</status>
+<spdom>
+<bounding>
+<westbc>
+-124.372753</westbc>
+<eastbc>
+-113.914049</eastbc>
+<northbc>
+41.976579</northbc>
+<southbc>
+31.884901</southbc>
+</bounding>
+</spdom>
+<keywords>
+<theme>
+<themekt>none</themekt>
+<themekey>spills</themekey>
+<themekey>incidents</themekey>
+<themekey>spill response</themekey>
+<themekey>pollution</themekey>
+<themekey>marine</themekey>
+<themekey>tracking</themekey>
+</theme>
+<theme>
+<themekt>ISO 19115 Topic Category</themekt>
+<themekey>biota</themekey>
+<themekey>environment</themekey>
+<themekey>inlandWaters</themekey>
+</theme>
+<place>
+<placekt>none</placekt>
+<placekey>California</placekey>
+</place>
+</keywords>
+<accconst>None</accconst>
+<useconst>None</useconst>
+<ptcontac>
+<cntinfo>
+<cntorgp>
+<cntorg>California Department of Fish and Game, Office of Spill Prevention and Response</cntorg>
+<cntper>Mark Lampinen, GIS data, Cathy Conway, database</cntper>
+</cntorgp>
+<cntpos>Research Program Specialist I</cntpos>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>1700 K Street, Suite #250</address>
+<city>Sacramento</city>
+<state>California</state>
+<postal>95811</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>916 322-4777 Mark Lampinen</cntvoice>
+<cntvoice>916 341-6957 Cathy Conway</cntvoice>
+<cntfax>916 324-8829</cntfax>
+<cntemail>mlampine@ospr.dfg.ca.gov</cntemail>
+<cntemail>cconway@ospr.dfg.ca.gov</cntemail>
+<hours>08:00 am - 05:00 pm</hours>
+</cntinfo>
+</ptcontac>
+<datacred>Cal EMA, DFG-OSPR</datacred>
+<native>Microsoft Windows Vista Version 6.1 (Build 7601) Service Pack 1; ESRI ArcCatalog 9.3.1.3000</native>
+</idinfo>
+<dataqual>
+<lineage>
+<procstep>
+<procdesc>The incidents are reported to Cal EMA by the National Response Center, law enforcement, fire departments, local, state, other governmental agencies and private citizens. Incidents are entered into a Lotus Notes Database by the Cal EMA State Warning Center. The reports can be phoned, faxed or email to Cal EMA. Data is sent from Cal EMA to OSPR via Lotus Notes email. The OSPR spill analysts update the OSPR Lotus Notes Spill Database on a daily basis and use CSV Exporter to move the data to the OSPR Incident Database. Field staff provide updates and additional information for incidents using the internet and secure VPN. The OSPR GIS group can add the Incident Data to ArcMap via a Database Connection. The data contains spatial coordinates, latitude/longitude, that are used to bring the data into a map layout as an X, Y theme.</procdesc>
+<srcused>C:\DOCUME~1\mlampine\LOCALS~1\Temp\xml6B3.tmp</srcused>
+<procdate>20090723</procdate>
+<proctime>11522600</proctime>
+<proccont>
+<cntinfo>
+<cntperp>
+<cntper>Mark Lampinen</cntper>
+<cntorg>California Department of Fish and Game, Office of Spill Prevention and Response</cntorg>
+</cntperp>
+<cntpos>Research Program Specialist I</cntpos>
+<cntvoice>916 322-4777</cntvoice>
+<cntfax>916 324-8829</cntfax>
+<cntemail>mlampine@ospr.dfg.ca.gov</cntemail>
+<hours>08:00 am - 05:00 0m</hours>
+</cntinfo>
+</proccont>
+</procstep>
+<procstep>
+<procdesc>Edited original metadata by adding ISO keywords.  Reprojected data into California Teale Albers NAD83.</procdesc>
+<procdate>20090730</procdate>
+<proccont>
+<cntinfo>
+<cntperp>
+<cntper>Greg Ewing</cntper>
+<cntorg>California Department of Fish and Game</cntorg>
+</cntperp>
+<cntemail>bios@dfg.ca.gov</cntemail>
+</cntinfo>
+</proccont>
+</procstep>
+</lineage>
+</dataqual>
+<spdoinfo>
+<direct>Vector</direct>
+<ptvctinf>
+<sdtsterm>
+<sdtstype>Entity point</sdtstype>
+<ptvctcnt>3237</ptvctcnt>
+</sdtsterm>
+</ptvctinf>
+</spdoinfo>
+<spref>
+<horizsys>
+<planar>
+<mapproj>
+<mapprojn>Albers Conical Equal Area</mapprojn>
+<albers>
+<stdparll>34.000000</stdparll>
+<stdparll>40.500000</stdparll>
+<longcm>-120.000000</longcm>
+<latprjo>0.000000</latprjo>
+<feast>0.000000</feast>
+<fnorth>-4000000.000000</fnorth>
+</albers>
+</mapproj>
+<planci>
+<plance>coordinate pair</plance>
+<coordrep>
+<absres>0.000000</absres>
+<ordres>0.000000</ordres>
+</coordrep>
+<plandu>meters</plandu>
+</planci>
+</planar>
+<geodetic>
+<horizdn>North American Datum of 1983</horizdn>
+<ellips>Geodetic Reference System 80</ellips>
+<semiaxis>6378137.000000</semiaxis>
+<denflat>298.257222</denflat>
+</geodetic>
+</horizsys>
+</spref>
+<eainfo>
+<detailed>
+<enttyp>
+<enttypl>
+ds394</enttypl>
+</enttyp>
+<attr>
+<attrlabl>FID</attrlabl>
+<attrdef>Internal feature number.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+<udom>Sequential unique whole numbers that are automatically generated.</udom>
+</attrdomv>
+</attr>
+<attr>
+<attrlabl>Shape</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+<udom>Coordinates defining the features.</udom>
+</attrdomv>
+</attr>
+<attr>
+<attrlabl>DFGControl</attrlabl>
+<attrdef>Unique number assigned to incidents.</attrdef>
+</attr>
+<attr>
+<attrlabl>OESNUMBER</attrlabl>
+<attrdef>Control number assigned by Cal EMA</attrdef>
+</attr>
+<attr>
+<attrlabl>TIMEOFINCI</attrlabl>
+<attrdef>Time the incident was reported.</attrdef>
+</attr>
+<attr>
+<attrlabl>DateofInci</attrlabl>
+<attrdef>Date the incident was reported.</attrdef>
+</attr>
+<attr>
+<attrlabl>InlandMari</attrlabl>
+<attrdef>Location of the incident, inland or marine, marine data is from entry by Oil Spill Prevention Specialists and is accurate to 98%, inland data is based on California Emergency Management Agency reports is only as accurate as the reporting party.</attrdef>
+</attr>
+<attr>
+<attrlabl>Latitude</attrlabl>
+<attrdef>Latitude coordinate (Y) of the incident-NAD83.</attrdef>
+</attr>
+<attr>
+<attrlabl>WATERWAY</attrlabl>
+<attrdef>Name of the water body affected by the spill.</attrdef>
+</attr>
+<attr>
+<attrlabl>LOCALECITY</attrlabl>
+<attrdef>Location of the spill site.</attrdef>
+</attr>
+<attr>
+<attrlabl>LOCALECOUN</attrlabl>
+<attrdef>Location of the spill site, California counties.</attrdef>
+</attr>
+<attr>
+<attrlabl>Longitude</attrlabl>
+<attrdef>Longitude coordinate (X) of the incident - NAD83.</attrdef>
+</attr>
+<attr>
+<attrlabl>SpecificLo</attrlabl>
+<attrdef>Type of water affected by the spill, "Marine waters" means those waters subject to tidal influence and includes the waterways used for waterborne commercial vessel traffic to the Port of Sacramento and the Port of Stockton (Gov. Code 8670.3 (i), fresh water is the water in inland lakes, streams, rivers and canals.</attrdef>
+</attr>
+<attr>
+<attrlabl>Water</attrlabl>
+<attrdef>Did the spill contact surface water? Did it pass into the waters of the state?</attrdef>
+</attr>
+</detailed>
+</eainfo>
+<distinfo>
+<resdesc>Downloadable Data</resdesc>
+<stdorder>
+<digform>
+<digtinfo>
+<transize>0.087</transize>
+</digtinfo>
+</digform>
+</stdorder>
+</distinfo>
+<metainfo>
+<metd>20140703</metd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>Department of Fish and Game, Office of Spill Prevention and Response</cntorg>
+<cntper>Mark Lampinen</cntper>
+</cntorgp>
+<cntpos>Research Program Specialist I</cntpos>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>1700 K Street, Suite #250</address>
+<city>Sacramento</city>
+<state>California</state>
+<postal>95811</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>916 322-4777</cntvoice>
+<cntfax>916 824-8829</cntfax>
+<cntemail>mlampine@ospr.dfg.ca.gov</cntemail>
+<hours>08:00 am - 05:00 pm</hours>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+<mettc>local time</mettc>
+<metextns>
+<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+<metprof>ESRI Metadata Profile</metprof>
+</metextns>
+</metainfo>
+</metadata>

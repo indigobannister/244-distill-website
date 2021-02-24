@@ -1,0 +1,150 @@
+﻿<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>ds394</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <spdom>
+      <bounding>
+        <westbc>-124.372753</westbc>
+        <eastbc>-113.914049</eastbc>
+        <northbc>41.976579</northbc>
+        <southbc>31.884901</southbc>
+      </bounding>
+    </spdom>
+    <accconst>None</accconst>
+    <useconst>None</useconst>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.1.3143</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>3237</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>NAD 1983 California Teale Albers</mapprojn>
+          <albers>
+            <stdparll>34.0</stdparll>
+            <stdparll>40.5</stdparll>
+            <longcm>-120.0</longcm>
+            <latprjo>0.0</latprjo>
+            <feast>0.0</feast>
+            <fnorth>-4000000.0</fnorth>
+          </albers>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000003754707655900803</absres>
+            <ordres>0.000000003754707655900803</ordres>
+          </coordrep>
+          <plandu>meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D North American 1983</horizdn>
+        <ellips>GRS 1980</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>ds394</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DFGControl</attrlabl>
+        <attrdef>Unique number assigned to incidents.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>OESNUMBER</attrlabl>
+        <attrdef>Control number assigned by Cal EMA</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>TIMEOFINCI</attrlabl>
+        <attrdef>Time the incident was reported.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>DateofInci</attrlabl>
+        <attrdef>Date the incident was reported.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>InlandMari</attrlabl>
+        <attrdef>Location of the incident, inland or marine, marine data is from entry by Oil Spill Prevention Specialists and is accurate to 98%, inland data is based on California Emergency Management Agency reports is only as accurate as the reporting party.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Latitude</attrlabl>
+        <attrdef>Latitude coordinate (Y) of the incident-NAD83.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>WATERWAY</attrlabl>
+        <attrdef>Name of the water body affected by the spill.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>LOCALECITY</attrlabl>
+        <attrdef>Location of the spill site.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>LOCALECOUN</attrlabl>
+        <attrdef>Location of the spill site, California counties.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Longitude</attrlabl>
+        <attrdef>Longitude coordinate (X) of the incident - NAD83.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>SpecificLo</attrlabl>
+        <attrdef>Type of water affected by the spill, "Marine waters" means those waters subject to tidal influence and includes the waterways used for waterborne commercial vessel traffic to the Port of Sacramento and the Port of Stockton (Gov. Code 8670.3 (i), fresh water is the water in inland lakes, streams, rivers and canals.</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Water</attrlabl>
+        <attrdef>Did the spill contact surface water? Did it pass into the waters of the state?</attrdef>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Shapefile</formname>
+          <transize>0.087</transize>
+        </digtinfo>
+        <digtopt />
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20140703</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>
